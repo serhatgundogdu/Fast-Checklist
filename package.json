@@ -1,0 +1,14 @@
+{
+  "name": "fast-checklist",
+  "version": "1.0.1",
+  "description": "Fast Checklist",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Serhat Gündoğdu",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^12.0.0"
+  }
+}

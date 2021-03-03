@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B738 Checklist</title>
+</head>
+<body style="-webkit-app-region: drag">
+    <div class="container">
+        <button class="btn" id = "btnCheckClose">Close Checklist</button>
+    </div>
+</body>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+    * {
+    padding: 0px;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    outline: 0;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    font-family: "Mulish",sans-serif;
+    }   
+    body{
+        height: 100vh;
+        background: #18191a;
+    }
+    button{
+        -webkit-app-region: no-drag;
+    }
+    label{
+        -webkit-app-region: no-drag;
+    }
+    input{
+        -webkit-app-region: no-drag;
+    }
+    .container{
+        padding: 5px;
+    }
+    .btn{
+        padding: 10px 20px;
+        background: #e00000;
+        width: 100%;
+        color: white;
+        font-weight: bolder;
+        border-radius: 4px;
+
+    }
+    .btn:hover{
+        background: #b80606;
+    }
+</style>
+<script src="./checklist.js"></script>
+</html>
