@@ -53,7 +53,7 @@ function CreateWindow(data){
     newWindow = new BrowserWindow({
         frame: false,
         width: 475,
-        height: 570,
+        height: 580,
         webPreferences: {
             contextIsolation: true,
             enableRemoteModule: false, 

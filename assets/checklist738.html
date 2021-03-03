@@ -9,6 +9,25 @@
 <body style="-webkit-app-region: drag">
     <div class="container">
         <button class="btn" id = "btnCheckClose">Close Checklist</button>
+        <div class="checklist">
+            <div class="category active">
+                <div class="header">
+                    <b>BEFORE START</b>
+                </div>
+                <div class="body">
+            
+                </div>
+            </div>
+            <div class="category">
+                <div class="header">
+                    <b>AFTER START</b>
+                </div>
+                <div class="body">
+            
+                </div>
+            </div>
+            <button class="btn primary" id = "btnNextChecklist">Next</button>    
+        </div>
     </div>
 </body>
 <style>
@@ -24,6 +43,7 @@
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
     font-family: "Mulish",sans-serif;
+    color: white;
     }   
     body{
         height: 100vh;
@@ -52,6 +72,59 @@
     }
     .btn:hover{
         background: #b80606;
+    }
+    .primary{
+        margin-top: 5px;
+        background: #2a3979 !important;
+    }
+    .primary:hover{
+        background: #222d61 !important;
+    }
+    .checklist{
+        border-top: 1px solid #393a3b;
+        margin-top: 5px;
+    }
+    .checklist .category{
+        display: none;
+    }
+    .checklist .active{
+        display: block;
+    }
+    .checklist .header{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+    .checklist-item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+    .checklist-item:last-child{
+        margin-bottom: 0;
+    }
+    .checklist-item .checkedbutton{
+        -webkit-app-region: no-drag;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        margin-left: 10px;
+        display: block;
+        position: relative;
+        background: #393a3b;
+        z-index: 4;
+    }
+    .checklist-item input:checked + .checkedbutton::after{
+        content: '\2713';
+        display: block;
+        position: absolute;
+        z-index: 5;
+        left: 10px;
+        top: 3px;
     }
 </style>
 <script src="./checklist.js"></script>
