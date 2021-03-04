@@ -2,12 +2,21 @@ const electron = require("electron");
 const url = require("url");
 const path = require("path");
 const { dirname } = require("path");
+const client = require('discord-rich-presence')('816971132263596032');
 
 const { app , BrowserWindow, Menu , ipcMain}  = electron;
 
 let mainWindow, newWindow;
 
 app.on('ready', () => {
+
+    client.updatePresence({
+        state: 'Main Menu',
+        details: '🐍',
+        largeImageKey: 'logo',
+        smallImageKey: 'logo',
+        instance: true,
+      });
 
     mainWindow = new BrowserWindow({
         frame: false,
@@ -39,13 +48,29 @@ app.on('ready', () => {
     ipcMain.on("ist:checklist", (err, data) => {
         if(newWindow == null){
             CreateWindow(data)
+            client.updatePresence({
+                state: `Using ${data.toUpperCase()} Checklist`,
+                details: '🐍',
+                largeImageKey: 'logo',
+                smallImageKey: 'logo',
+                instance: true,
+            });
         }
     })
 
     ipcMain.on("checklist:quit", (err, data) => {
         newWindow.close();
         newWindow = null;
+        client.updatePresence({
+            state: 'Main Menu',
+            details: '🐍',
+            largeImageKey: 'logo',
+            smallImageKey: 'logo',
+            instance: true,
+          });
     })
+
+    
 
 });
 

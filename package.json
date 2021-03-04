@@ -1,6 +1,7 @@
 {
   "name": "fast-checklist",
-  "version": "1.0.1",
+  "productName": "Fast Checklist",
+  "version": "1.1.2",
   "description": "Fast Checklist",
   "main": "main.js",
   "scripts": {
@@ -8,7 +9,12 @@
   },
   "author": "Serhat Gündoğdu",
   "license": "ISC",
+  "devDependencies": {
+    "electron": "^12.0.0",
+    "electron-packager": "^15.2.0"
+  },
   "dependencies": {
-    "electron": "^12.0.0"
+    "discord-rich-presence": "^0.0.8",
+    "discord-rpc": "^3.2.0"
   }
 }
