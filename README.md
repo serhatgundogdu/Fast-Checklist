@@ -1,7 +1,7 @@
 # Fast-Checklist
 Simulation Use Only, First Electron JS App
 
-![](https://media.discordapp.net/attachments/515535783503986933/822957720952766535/unknown.png?width=1000&height=670)
+![](https://cdn.discordapp.com/attachments/515535783503986933/824232010058956880/unknown.png)
 
 
 Thanks to Krengul and Kerem Gezmiş for their screenshots
